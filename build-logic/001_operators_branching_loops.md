@@ -3,16 +3,40 @@
 ## Easy
 
 1. Write a program to add 5 numbers. The value of numbers are num1=5, num2=13, num3=7, num4=21 and num5=48.
+```javascript
+const add = (...rest) => (rest.reduce((total, instance)=> total + instance, 0));
+console.log(add(5, 13, 7, 21, 48)); //output - 94
+```
 
-1. Write a program to take a number input from user and determine whether the number is odd or even.
+2. Write a program to take a number input from user and determine whether the number is odd or even.
+```javascript
+const oddOrEven = (num) => num%2 === 0 ? "even": "odd";
+console.log(oddOrEven(9)); //odd
+```
 
-1. Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
+3. Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
+```javascript
+const compareNumbers = (num1, num2) => num1 > num2 ? `max: ${num1} & min: ${num2}` : num2 > num1 ? `max: ${num2} & min: ${num1}` : `${num1} & ${num2} are equal`;
+console.log(compareNumbers(129,251)); //max: 251 & min: 129
+```
 
-1. Write a program to find the maximum out of three given numbers. The numbers are num1=8, num2=23 and num3=17.
+4. Write a program to find the maximum out of three given numbers. The numbers are num1=8, num2=23 and num3=17.
+```javascript
+const findMax = (...rest) => rest.reduce((accumulator, instance) => instance > accumulator ? instance : accumulator );
+console.log(findMax(8,23,17)); //23
+```
 
-1. Write a program to find the minimum out of three given numbers. The numbers are num1=35, num2=29 and num3=46.
+5. Write a program to find the minimum out of three given numbers. The numbers are num1=35, num2=29 and num3=46.
+```javascript
+const findMin = (...rest) => rest.reduce((accumulator, instance) => instance < accumulator ? instance : accumulator );
+console.log(findMin(35,29,46)); //29
+```
 
-1. Write program to take a month as an input from the user and find out whether the month has 31 days or not.
+6. Write program to take a month as an input from the user and find out whether the month has 31 days or not.
+```javascript
+const has31Days = (monthNum) => [1,3,5,7,8,10,12].includes(monthNum) ? "Has 31 days": "Does not have 31 days";
+console.log(has31Days(9)); // Does not have 31 days //string can be checked in the same way
+```
 
 ## Intermediate
 
